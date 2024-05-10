@@ -16,6 +16,11 @@ class Myelement extends LitElement{
 //CSS DEL OSOCOCOCOCOCOCOSOSOSOSOSOSOSOSOSOSOS
   static styles = css`
 
+  * {
+    margin: 0;
+    padding: 0
+  }
+
   my-element{
     background: green
   }
@@ -28,17 +33,15 @@ class Myelement extends LitElement{
     height:100vh;
     background: green;
     grid-template-columns:  1fr ;
-    grid-template-rows: repeat(9, 1fr);
+    grid-template-rows: 0.3fr 3fr 0.8fr 0.6fr 1fr 0.5fr 0.3fr;   
     grid-template-areas: 
     " titule "
-    " container__image "
-    " container__image "
-    " container__image "
     " container__image "
     " song_name "
     " line_song "
     " change_song "
     " song_volumen "
+    " dispositive "
   
   }
   
@@ -83,23 +86,19 @@ class Myelement extends LitElement{
     justify-content: space-around;
     flex-direction: row;
     align-items: center;
-  }
-  .song_name .titule_song{
-    gap: 
-  }
-
-
-  .song_name i{
-    width: vh;
-    height:
+    
+    
   }
 
   .song_name .titule_song{
+    
     color: white;
     display:flex;
     flex-direction: column;
     align-items: center;
-    gap: 
+    flex-direction: center
+    height: 100px;
+    outline: red solid 1px
 
   }
 
@@ -107,9 +106,20 @@ class Myelement extends LitElement{
   /*PARTE DE TIEMPO DE LA CANCION------------------------------------*/
   .line_song{
     background: brown;
+    display:flex;
+    align-items: center;
+    justify-content: center
+    
+
 
   }
-  
+
+  .line_song input{
+
+    background: green;
+    height: 10px;
+    width: 40vw
+  }
 
 
   /*PARTE DE CAMBIAR LA CANCION CHANGE_SONG----------------------*/ 
@@ -130,6 +140,11 @@ class Myelement extends LitElement{
 
   }
 
+  /*DISPOSITIVE--------------------------------------------------*/
+  .dispositive{
+    grid-area: dispositive;
+  }
+  
   `
 
 //HTML DEL COSOSOSOSOSOSOSOOCODOCOSOCSOCSOCSOSOSOS
@@ -164,12 +179,15 @@ class Myelement extends LitElement{
         </div>
 
         <div class="line_song">
-          <img>
+          <input type="range" name="slider" id="slide2">
         </div>
         <div class="change_song">
           <img>
         </div>
         <div class="song_volumen">
+          <img>
+        </div>
+        <div class="dispositive">
           <img>
         </div>
       </div>
