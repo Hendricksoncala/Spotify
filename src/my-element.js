@@ -22,17 +22,18 @@ class Myelement extends LitElement{
   }
 
   my-element{
-    background: green
+    background: green;
+    width: 100dvw
   }
 
 
   .container{
     
     display: grid;
-    width:50vw;
+    width:50% !important;
     height:100vh;
-    background: green;
-    grid-template-columns:  1fr ;
+    background: white;
+    grid-template-columns:  1fr  ;
     grid-template-rows: 0.3fr 3fr 0.8fr 0.6fr 1fr 0.5fr 0.3fr;   
     grid-template-areas: 
     " titule "
@@ -49,7 +50,8 @@ class Myelement extends LitElement{
   /*TITULO DE NOW PLAYING ---------------------------------*/ 
   .titule{
     grid-area: titule;
-    background: purple;
+    color: black;
+    // background: purple;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,7 +61,7 @@ class Myelement extends LitElement{
   /*IMAGEN DEL MEDIO PARA POER CONTROLARLA----------------*/
   .container__image{
     grid-area: container__image;
-    background: red;
+    // background: red;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
@@ -81,9 +83,10 @@ class Myelement extends LitElement{
   /*PARTE DE NOMBRE SONG_NAME----------------------*/
   .song_name{
     grid-area: song_name;
-    background: gray;
+    color: green;
+    // background: gray;
     display:flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: row;
     align-items: center;
     
@@ -92,12 +95,11 @@ class Myelement extends LitElement{
 
   .song_name .titule_song{
     
-    color: white;
+    color: black;
     display:flex;
     flex-direction: column;
     align-items: center;
-    flex-direction: center
-    height: 100px;
+    flex-direction: center;
     outline: red solid 1px
 
   }
@@ -105,7 +107,7 @@ class Myelement extends LitElement{
 
   /*PARTE DE TIEMPO DE LA CANCION------------------------------------*/
   .line_song{
-    background: brown;
+    // background: brown;
     display:flex;
     align-items: center;
     justify-content: center
@@ -118,7 +120,8 @@ class Myelement extends LitElement{
 
     background: green;
     height: 10px;
-    width: 40vw
+    width: 80%
+
   }
 
 
@@ -143,6 +146,7 @@ class Myelement extends LitElement{
   /*DISPOSITIVE--------------------------------------------------*/
   .dispositive{
     grid-area: dispositive;
+    background: cyan
   }
   
   `
