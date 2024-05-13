@@ -10,6 +10,9 @@ class Myelement extends LitElement{
     this.song = "Villians and Heroes"
     this.album = "heros and villians"
 
+    this.plustime = "2:14"
+    this.negativetime = "-1:15"
+
 
     this.imagen = "/src/assets/metroboom.png"
   }
@@ -30,7 +33,7 @@ class Myelement extends LitElement{
   .container{
     
     display: grid;
-    width:50% !important;
+    width:100% !important;
     height:100vh;
     background: white;
     grid-template-columns:  1fr  ;
@@ -75,7 +78,7 @@ class Myelement extends LitElement{
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    width: 500px
+    width: 50%;
 
     
   }
@@ -100,7 +103,7 @@ class Myelement extends LitElement{
     flex-direction: column;
     align-items: center;
     flex-direction: center;
-    outline: red solid 1px
+ 
 
   }
 
@@ -110,16 +113,37 @@ class Myelement extends LitElement{
     // background: brown;
     display:flex;
     align-items: center;
-    justify-content: center
+    flex-direction: column;
+    justify-content: center;
+    color: black
     
 
 
   }
+  .time{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+  }
 
+  .line_song input[type="range"] {
+  background-color: gray; /* Color de fondo del input */
+  height: 5px; /* Altura del input */
+  border-radius: 2px; /* Redondeamos los bordes */
+  accent-color: ; /* Color del thumb (verde) */
+}
+
+.line_song input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Quitamos la apariencia por defecto del thumb */
+  width: 20px; /* Ancho del thumb */
+  height: 20px; /* Alto del thumb */
+  border-radius: 50%; /* Redondeamos el thumb */
+  background-color: #00ff00; /* Color del thumb (verde) */
+  cursor: pointer; /* Cambiamos el cursor a una mano */
+}
   .line_song input{
 
     background: green;
-    height: 10px;
     width: 80%
 
   }
@@ -183,6 +207,10 @@ class Myelement extends LitElement{
         </div>
 
         <div class="line_song">
+          <div class="time">
+            <p>${this.plustime}</p>
+            <p>${this.negativetime}</p>
+          </div>
           <input type="range" name="slider" id="slide2">
         </div>
         <div class="change_song">
