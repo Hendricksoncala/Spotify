@@ -37,7 +37,7 @@ class Myelement extends LitElement{
     width:100% !important;
     height:100vh;
     background: white;
-    grid-template-columns:  1fr  ;
+    grid-template-columns: 1fr;
     grid-template-rows: 0.3fr 3fr 0.5fr 0.5fr 0.5fr 0.5fr 0.3fr;   
     grid-template-areas: 
     "titule"
@@ -74,16 +74,14 @@ class Myelement extends LitElement{
     width:100%;
 
   }
-  .container__image img{
+  .container__image > img {
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
     width: 60%;
-
-
-    
   }
+
 
   /*PARTE DE NOMBRE SONG_NAME----------------------/*/
   .song_name{
@@ -246,6 +244,58 @@ class Myelement extends LitElement{
     justify-content: space-around;
     
   }
+
+  @media screen and (max-width: 768px){
+ /*  /PARTE DE CAMBIAR LA CANCION CHANGE_SONG----------------------/*/
+ .change_song{
+  grid-area: change_song;
+  // background: orange;
+  display:flex;
+  justify-content: space-evenly;
+
+}
+
+.change_song .play{
+
+  width: 20vw;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+}
+.change_song img{
+  width: 6%; /* ajusta el ancho y alto según sea necesario */
+  height: 100%;
+  border: none;
+  cursor: pointer; /* cambia el cursor a una mano para indicar que es clickable */
+
+}
+
+
+      /*DISPOSITIVE--------------------------------------------------*/
+  .dispositive{
+    grid-area: dispositive;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    
+
+  }
+  .info_dispositive {
+    display: flex;
+    align-items: center;
+    background: #1db95434;
+    border-radius: 20px;
+    width: 50%;
+    color: gray;
+    align-content: stretch;
+    justify-content: space-around;
+    
+  }
+  }
+
   `
 
 //HTML DEL COSOSOSOSOSOSOSOOCODOCOSOCSOCSOCSOSOSOS

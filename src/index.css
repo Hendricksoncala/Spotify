@@ -41,6 +41,24 @@ my-element{
 }
 
 
+@media screen and (max-width: 768px) {
+  /* Estilos para dispositivos con un ancho máximo de 768px (por ejemplo, dispositivos móviles) */
+  body {
+    grid-template-columns: 1fr; 
+    grid-template-areas: 
+    " container "
+    " container "
+    " container "
+    " container "
+    " container "
+    " container "
+    " container "
+    " container "
+  }
+  
+  /* Ajusta otros estilos según sea necesario */
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
