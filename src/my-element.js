@@ -78,7 +78,7 @@ class Myelement extends LitElement{
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    width: 80%;
+    width: 60%;
 
 
     
@@ -113,40 +113,39 @@ class Myelement extends LitElement{
   .line_song{
     // background: brown;
     display:flex;
-    align-items: center;
+
     flex-direction: column;
-    justify-content: center;
     color: black
-    
-
-
+  
   }
-  .time{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between
+  .line_song .time{
+    display:flex;
+    justify-content: space-around;
   }
 
-  .line_song input[type="range"] {
-  background-color: gray; /* Color de fondo del input */
-  height: 5px; /* Altura del input */
-  border-radius: 2px; /* Redondeamos los bordes */
-  accent-color: #1DB954; /* Color del thumb (verde) */
-}
+  .line_song .time_line input[type="range"] {
+    background-color: gray; /* Color de fondo del input */
+    height: 5px; /* Altura del input */
+    border-radius: 2px; /* Redondeamos los bordes */
+    accent-color: #1DB954; /* Color del thumb (verde) */
 
-.line_song input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Quitamos la apariencia por defecto del thumb */
-  width: 20px; /* Ancho del thumb */
-  height: 20px; /* Alto del thumb */
-  border-radius: 50%; /* Redondeamos el thumb */
-  background-color: #00ff00; /* Color del thumb (verde) */
-  cursor: pointer; /* Cambiamos el cursor a una mano */
-}
+  }
+
+  .line_song .time_line input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Quitamos la apariencia por defecto del thumb */
+    width: 20px; /* Ancho del thumb */
+    height: 20px; /* Alto del thumb */
+    border-radius: 50%; /* Redondeamos el thumb */
+    background-color: #00ff00; /* Color del thumb (verde) */
+    cursor: pointer; /* Cambiamos el cursor a una mano */
+  }
   .line_song input{
+    width: 70%
 
-    background: green;
-    width: 80%
-
+  }
+  .line_song .time_line{
+    display:flex;
+    justify-content: center
   }
 
 
@@ -155,9 +154,30 @@ class Myelement extends LitElement{
     grid-area: change_song;
     background: orange;
     display:flex;
-    justify-content: row;
-    flex-direction: space-between
+    justify-content: space-evenly;
+
   }
+  .change_song img{
+
+    image: url('src/assets/play button.svg');
+    background-size: contain;
+    width: 1.5vw; /* ajusta el ancho y alto según sea necesario */
+    height: 100%;
+    border: none;
+    cursor: pointer; /* cambia el cursor a una mano para indicar que es clickable */
+
+  }
+  .change_song .play{
+    image: url('src/assets/play button.svg');
+    background-size: contain;
+    width: 6vw; /* ajusta el ancho y alto según sea necesario */
+    height: 100%;
+    border: none;
+    cursor: pointer; /* cambia el cursor a una mano para indicar que es clickable */
+
+  }
+
+
   /*PARTE DE VOLUMEN DEL DISPOSITIVO-----------------------------*/ 
   .song_volumen{
     grid-area: song_volumen;
@@ -212,10 +232,19 @@ class Myelement extends LitElement{
             <p>${this.plustime}</p>
             <p>${this.negativetime}</p>
           </div>
-          <input type="range" name="slider" id="slide2">
+          <div class="time_line">
+            <input type="range" name="slider" id="slide2">
+          </div>
         </div>
         <div class="change_song">
-          <img>
+
+          <img src="src/assets/Group 45.svg" class="aleatory">
+          <img src="src/assets/Group.svg"  class="left">
+          <img src="src/assets/play button.svg" class="play">
+          <img src="src/assets/Group right.svg" class="right">
+          <img src="src/assets/Group 44.svg" class="rewind">
+
+
         </div>
         <div class="song_volumen">
           <img>
