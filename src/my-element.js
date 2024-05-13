@@ -11,7 +11,7 @@ class Myelement extends LitElement{
     this.album = "heros and villians"
 
     this.plustime = "2:14"
-    this.negativetime = "-1:15"
+    this.negativetime = " -1:15"
 
 
     this.imagen = "/src/assets/metroboom.png"
@@ -78,7 +78,8 @@ class Myelement extends LitElement{
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    width: 50%;
+    width: 80%;
+
 
     
   }
@@ -86,7 +87,7 @@ class Myelement extends LitElement{
   /*PARTE DE NOMBRE SONG_NAME----------------------*/
   .song_name{
     grid-area: song_name;
-    color: green;
+    color: #1DB954;
     // background: gray;
     display:flex;
     justify-content: space-evenly;
@@ -130,7 +131,7 @@ class Myelement extends LitElement{
   background-color: gray; /* Color de fondo del input */
   height: 5px; /* Altura del input */
   border-radius: 2px; /* Redondeamos los bordes */
-  accent-color: ; /* Color del thumb (verde) */
+  accent-color: #1DB954; /* Color del thumb (verde) */
 }
 
 .line_song input[type="range"]::-webkit-slider-thumb {
