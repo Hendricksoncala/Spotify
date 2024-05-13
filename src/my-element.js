@@ -51,7 +51,7 @@ class Myelement extends LitElement{
   }
   
 
-  /TITULO DE NOW PLAYING ---------------------------------/ 
+  /*TITULO DE NOW PLAYING ---------------------------------*/ 
   .titule{
     grid-area: titule;
     color: black;
@@ -62,7 +62,7 @@ class Myelement extends LitElement{
   }
 
 
-  /IMAGEN DEL MEDIO PARA POER CONTROLARLA----------------/
+  /*/IMAGEN DEL MEDIO PARA POER CONTROLARLA----------------/*/
   .container__image{
     grid-area: container__image;
     // background: red;
@@ -85,7 +85,7 @@ class Myelement extends LitElement{
     
   }
 
-  /PARTE DE NOMBRE SONG_NAME----------------------/
+  /*PARTE DE NOMBRE SONG_NAME----------------------/*/
   .song_name{
     grid-area: song_name;
     color: #1DB954;
@@ -110,7 +110,7 @@ class Myelement extends LitElement{
   }
 
 
-  /PARTE DE TIEMPO DE LA CANCION------------------------------------/
+  /*/PARTE DE TIEMPO DE LA CANCION------------------------------------/*/
   .line_song{
     // background: brown;
     display:flex;
@@ -149,7 +149,7 @@ class Myelement extends LitElement{
   }
 
 
-  /PARTE DE CAMBIAR LA CANCION CHANGE_SONG----------------------/ 
+ /*  /PARTE DE CAMBIAR LA CANCION CHANGE_SONG----------------------/*/
   .change_song{
     grid-area: change_song;
     // background: orange;
@@ -178,10 +178,10 @@ class Myelement extends LitElement{
   }
 
 
-  /PARTE DE VOLUMEN DEL DISPOSITIVO-----------------------------/ 
+  /*PARTE DE VOLUMEN DEL DISPOSITIVO-----------------------------/ */
   .song_volumen{
     grid-area: song_volumen;
-    background: blue;
+    // background: blue;
     display:flex;
     justify-content: center;
   
@@ -228,6 +228,7 @@ class Myelement extends LitElement{
   .dispositive{
     grid-area: dispositive;
     background: cyan
+
   }
   
   `
