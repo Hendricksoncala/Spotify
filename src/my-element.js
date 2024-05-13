@@ -40,13 +40,13 @@ class Myelement extends LitElement{
     grid-template-columns:  1fr  ;
     grid-template-rows: 0.3fr 3fr 0.5fr 0.5fr 0.5fr 0.5fr 0.3fr;   
     grid-template-areas: 
-    " titule "
-    " container__image "
-    " song_name "
-    " line_song "
-    " change_song "
-    " song_volumen "
-    " dispositive "
+    "titule"
+    "container__image"
+    "song_name"
+    "line_song"
+    "change_song"
+    "song_volumen"
+    "dispositive"
   
   }
   
@@ -120,7 +120,8 @@ class Myelement extends LitElement{
   }
   .line_song .time{
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    color: gray
   }
 
   .line_song .time_line input[type="range"] {
@@ -224,13 +225,27 @@ class Myelement extends LitElement{
   }
 
 
-  /DISPOSITIVE--------------------------------------------------/
+  /*DISPOSITIVE--------------------------------------------------*/
   .dispositive{
     grid-area: dispositive;
-    background: cyan
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    
 
   }
-  
+  .info_dispositive {
+    display: flex;
+    align-items: center;
+    background: #1db95434;
+    border-radius: 20px;
+    width: 10vw;
+    color: gray;
+    align-content: stretch;
+    justify-content: space-around;
+    
+  }
   `
 
 //HTML DEL COSOSOSOSOSOSOSOOCODOCOSOCSOCSOCSOSOSOS
