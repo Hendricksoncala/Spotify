@@ -5,6 +5,7 @@ class Myelement extends LitElement{
   }
   constructor(){
     super();
+
     this.titule = "Now Playing"
 
     this.song = "Villians and Heroes"
