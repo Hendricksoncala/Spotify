@@ -1,5 +1,9 @@
 import { LitElement, html, css } from "lit";
 import { Myelement } from "./my-element.js";
+import { newMusic } from "./top-chart";
+import { myTrack } from "./playing-next";
+import { MyLeftBar } from "./segundoElement";
+
 
 class myGrid extends LitElement {
 
@@ -66,18 +70,27 @@ class myGrid extends LitElement {
         return html`
         <main class="main">
             <aside class="main__aside">
-                <article class="aside__profile"></article>
+                <article class="aside__profile">
+                    <my-left-bar></my-left-bar>
+                </article>
+
                 <article class="aside__buttons">
+
                 </article>
                 <article class="aside__exit"></article>
             </aside>
             <section class="main__section1">
-
+                <h1 class="tituloh1">Discover new Music</h1>
+                <h2>Top-Chart</h2>
+                <new-music class="new-music"></new-music>
             </section>
             <section class="main__section2">
-            <my-element>
+                <my-element></my-element>
             </section>
-            <section class="main__section3"></section>
+            <section class="main__section3">
+                <h1 class="tituloh1">Track-list</h1>
+                <my-track></my-track>
+            </section>
         </main>
         `
     }
@@ -85,3 +98,6 @@ class myGrid extends LitElement {
 
 customElements.define("my-grid" , myGrid)
 customElements.define("my-element", Myelement)
+customElements.define("new-music", newMusic);
+customElements.define('my-track', myTrack);
+customElements.define('my-left-bar', MyLeftBar);
