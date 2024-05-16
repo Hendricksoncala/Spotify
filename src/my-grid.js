@@ -1,4 +1,5 @@
 import { LitElement, html, css } from "lit";
+import { Myelement } from "./my-element.js";
 
 class myGrid extends LitElement {
 
@@ -43,6 +44,9 @@ class myGrid extends LitElement {
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 80px;
         }
+        .main__aside{
+            order: 1;
+        }
         .aside__profile{
             display: none
         }
@@ -52,7 +56,7 @@ class myGrid extends LitElement {
         .main__section1{
             display: none
         }
-        .main__section2{
+        .main__section3{
             display: none
         }
     }
@@ -67,8 +71,12 @@ class myGrid extends LitElement {
                 </article>
                 <article class="aside__exit"></article>
             </aside>
-            <section class="main__section1"></section>
-            <section class="main__section2"></section>
+            <section class="main__section1">
+
+            </section>
+            <section class="main__section2">
+            <my-element>
+            </section>
             <section class="main__section3"></section>
         </main>
         `
@@ -76,3 +84,4 @@ class myGrid extends LitElement {
 }
 
 customElements.define("my-grid" , myGrid)
+customElements.define("my-element", Myelement)

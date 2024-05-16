@@ -1,5 +1,5 @@
 import  {LitElement, html, css} from "lit";
-class Myelement extends LitElement{
+export class Myelement extends LitElement{
   static properties = {
     titule: {type: String}
   }
@@ -371,4 +371,3 @@ class Myelement extends LitElement{
     this.name = e.target.value
   }
 }
-customElements.define("my-element", Myelement)
