@@ -11,7 +11,7 @@ export class Cardnewmusic extends LitElement {
   constructor() {
     super();
     this.data = sortSongsForPopularity()
-    //this.dataAlbumes = ["18NOKLkZETa4sWwLMIm0UZ", "444LqH6QlvR62nY8Vxn37u", "5r36AJ6VOJtp00oxSkBZ5h", "4jox3ip1I39DFC2B7R5qLH"]
+    // this.dataAlbumes = ["18NOKLkZETa4sWwLMIm0UZ", "444LqH6QlvR62nY8Vxn37u", "5r36AJ6VOJtp00oxSkBZ5h", "4jox3ip1I39DFC2B7R5qLH"]
   }
 
   static styles = css`

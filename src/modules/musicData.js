@@ -1,11 +1,11 @@
 const url = 'https://spotify23.p.rapidapi.com/recommendations/?limit=20&seed_tracks=0c6xIDDpzE81m2q797ordA&seed_artists=4NHQUGzhtTLFvgF5SZesLK&seed_genres=classical%2Ccountry';
 const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': '3d084e9cb9msh321ad15ea5c2f1ep11ef4ajsn46038ca7ad66',
-            'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
-        }
-    };
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'f347fe88aamsh1d5c26438c319eep1fd12ejsn7a031462f644',
+		'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+	}
+};
 let result
 try {
     const response = await fetch(url, options);

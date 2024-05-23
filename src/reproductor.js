@@ -3,7 +3,8 @@ import  {LitElement, html, css} from "lit";
 
 export class Reproductor extends LitElement{
   static properties = {
-    titule: {type: String}
+    titule: {type: String},
+    imagen: {typeof: String }
   }
   constructor(){
     super();
