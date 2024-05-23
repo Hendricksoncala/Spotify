@@ -1,5 +1,7 @@
 import  {LitElement, html, css} from "lit";
-export class Myelement extends LitElement{
+
+
+export class Reproductor extends LitElement{
   static properties = {
     titule: {type: String}
   }
@@ -9,16 +11,18 @@ export class Myelement extends LitElement{
     this.titule = "Now Playing"
 
     this.song = "Villians and Heroes"
-    this.album = "heros and villians"
+    this.album = "Metro Boomin"
 
     this.plustime = "2:14"
     this.negativetime = " -1:15"
 
-    this.imagen = "/src/assets/metroboom.png"
+    this.imagen = "/metroboom.png"
 
     this.dispositive = "Airpos Pro (Dave)"
   }
-//CSS DEL OSOCOCOCOCOCOCOSOSOSOSOSOSOSOSOSOSOS
+
+
+
   static styles = css`
 
   * {
@@ -37,7 +41,7 @@ export class Myelement extends LitElement{
     display: grid;
     width:100% !important;
     height:100vh;
-    background: white;
+    background: #f3f3f3;
     grid-template-columns: 1fr;
     grid-template-rows: 0.3fr 3fr 0.5fr 0.5fr 0.5fr 0.5fr 0.3fr;   
     grid-template-areas: 
@@ -149,7 +153,7 @@ export class Myelement extends LitElement{
   }
 
 
- /*  /PARTE DE CAMBIAR LA CANCION CHANGE_SONG----------------------/*/
+ /*  /PARTE DE CAMBIAR LA CANCION CHANGE_SONG---/*/
   .change_song{
     grid-area: change_song;
     // background: orange;
@@ -187,21 +191,21 @@ export class Myelement extends LitElement{
   
   }
   .song_volumen .volumen_line input[type="range"] {
-    background-color: gray; /* Color de fondo del input */
-    height: 5px; /* Altura del input */
+    background-color: gray;
+    height: 5px;
     width:50%;
-    border-radius: 2px; /* Redondeamos los bordes */
-    accent-color: #1DB954; /* Color del thumb (verde) */
+    border-radius: 2px;
+    accent-color: #1DB954;
 
   }
 
   .song_volumen .volumen_line input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Quitamos la apariencia por defecto del thumb */
-    width: 20px; /* Ancho del thumb */
-    height: 20px; /* Alto del thumb */
-    border-radius: 50%; /* Redondeamos el thumb */
-    background-color: #00ff00; /* Color del thumb (verde) */
-    cursor: pointer; /* Cambiamos el cursor a una mano */
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #00ff00;
+    cursor: pointer;
   }
   .volumen_line{
     display:flex;
@@ -219,7 +223,7 @@ export class Myelement extends LitElement{
     width: 1.5vw; /* ajusta el ancho y alto según sea necesario */
     height: 100%;
     border: none;
-    cursor: pointer; /* cambia el cursor a una mano para indicar que es clickable */
+    cursor: pointer;
 
   }
 
@@ -340,25 +344,25 @@ export class Myelement extends LitElement{
           </div>
         </div>
         <div class="change_song">
-          <img src="src/assets/Group 45.svg" class="aleatory">
-          <img src="src/assets/Group.svg"  class="left">
-          <img src="src/assets/play button.svg" class="play">
-          <img src="src/assets/Group right.svg" class="right">
-          <img src="src/assets/Group 44.svg" class="rewind">
+          <img src="/Group 45.svg" class="aleatory">
+          <img src="/Group.svg"  class="left">
+          <img src="/play button.svg" class="play">
+          <img src="/Group right.svg" class="right">
+          <img src="/Group 44.svg" class="rewind">
         </div>
 
         <div class="song_volumen">
 
           <div class="volumen_line">
-            <img src="src/assets/low_sound.svg" class="aleatory">
+            <img src="/low_sound.svg" class="aleatory">
             <input type="range" name="slider" id="slide2">
-            <img src="src/assets/up_sound.svg" class="aleatory">
+            <img src="/up_sound.svg" class="aleatory">
           </div>
 
         </div>
         <div class="dispositive">
           <div class="info_dispositive">
-            <img src="src/assets/Vector.svg" class="aleatory">
+            <img src="/Vector.svg" class="aleatory">
             <p>${this.dispositive}</p>
           </div>
         </div>
