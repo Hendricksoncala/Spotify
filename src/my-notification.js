@@ -9,45 +9,46 @@ class Mynotification extends LitElement {
     this.album = '/album.png'; 
 }
 
-static styles = css`
+  static styles = css`
 
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-body {
-background-color: black;
-}
+  body {
+    background-color: black;
+  }
 
-.notification {
-position: relative;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-width: 22rem;
-height: 25rem;
-overflow: hidden;
-border-radius: 30px;
-}
+  .notification {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 22rem;
+    height: 25rem;
+    overflow: hidden;
+    border-radius: 30px;
+  }
 
-.notification::before {
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-image: url(/src/assets/notificationwallpaper.jpg);
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-filter: blur(10px);
-z-index: -1;
-}
-.atras {
+  .notification::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/src/assets/notificationwallpaper.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+    z-index: -1;
+  }
+
+  .atras {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,29 +102,29 @@ z-index: -1;
   }
     `
 
-    render(){
-        return html`
-          <div class="notification">
-              
-            <div class="atras"><img src="/src/assets/atras.svg"></div>
-    
-            <div class="center">
-              <img src="${this.album}" />
-              <h2>${this.title}</h2>
-              <h3>${this.description}</h3>
-    
-              <div class="buttons">
-                  <img src="/src/assets/anterior.svg">
-                  <img src="/src/assets/play.svg" class="play">
-                  <img src="/src/assets/siguiente.svg">
-              </div>
-            </div>
+  render(){
+    return html`
+      <div class="notification">
+          
+        <div class="atras"><img src="/src/assets/atras.svg"></div>
+
+        <div class="center">
+          <img src="${this.album}" />
+          <h2>${this.title}</h2>
+          <h3>${this.description}</h3>
+
+          <div class="buttons">
+              <img src="/src/assets/anterior.svg">
+              <img src="/src/assets/play.svg" class="play">
+              <img src="/src/assets/siguiente.svg">
           </div>
-        `
-      }
-      _guardar(e){
-        this.name
-      }
-    }
-    
-    customElements.define("my-notification", Mynotification);
+        </div>
+      </div>
+    `
+  }
+  _guardar(e){
+    this.name
+  }
+}
+
+customElements.define("my-notification", Mynotification);
